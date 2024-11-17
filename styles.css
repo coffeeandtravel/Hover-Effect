@@ -1,0 +1,34 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111932; /* Dark background for glow contrast */
+    color: #ccd6f6;
+    overflow: hidden; /* Prevent scrollbars during cursor movement */
+  }
+  
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #ccd6f6;
+    text-align: center;
+  }
+  
+  /* Glow Trail */
+  #trail {
+    position: fixed;
+    width: 600px; /* Glow width */
+    height: 600px; /* Glow height */
+    background: rgba(13, 156, 161, 0.25); /* Subtle teal glow */
+    border-radius: 50%; /* Circular shape */
+    pointer-events: none; /* Ensure it doesn't block clicks */
+    z-index: 0; /* Appear above other elements */
+    transform: translate(-50%, -50%); /* Precisely center the glow on cursor */
+    filter: blur(100px); /* Smooth glowing effect */
+    mix-blend-mode: color-dodge; /* Enhance the glow's interaction with background */
+  }
+  
